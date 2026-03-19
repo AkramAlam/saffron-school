@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+/* ── CSS Variables ─────────────────────────── */
+:root {
+  --saffron:       #E8720C;
+  --saffron-light: #F59340;
+  --saffron-dark:  #B85A08;
+  --deep:          #1A0F00;
+  --cream:         #FDF6ED;
+  --warm-white:    #FFFBF5;
+  --text:          #2C1810;
+  --muted:         #7A5C48;
+  --border:        rgba(232, 114, 12, 0.15);
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'DM Sans', sans-serif;
+}
+
+/* ── Base Reset ────────────────────────────── */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--warm-white);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
