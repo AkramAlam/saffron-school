@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const STATS = [
   { number: '27+',   label: 'Years of\nExcellence' },
@@ -10,6 +11,7 @@ const STATS = [
 export default function Hero() {
   const [visible, setVisible] = useState(false)
   const [activeStat, setActiveStat] = useState(0)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const t = setTimeout(() => setVisible(true), 100)
@@ -153,7 +155,7 @@ export default function Hero() {
             }}
           >
             <button
-              onClick={() => handleClick('#admission')}
+              onClick={() => navigate('/admission')}
               style={{
                 display: 'inline-flex', alignItems: 'center', gap: 8,
                 padding: '13px 28px', background: '#E8720C',

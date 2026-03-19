@@ -279,6 +279,64 @@ export default function Contact() {
 
       </div>
 
+      {/* ── MAP ── */}
+      <div style={{ width: '90%', margin: '60px auto 0' }}>
+        <div style={{
+          borderRadius: 20, overflow: 'hidden',
+          border: '1px solid rgba(255,255,255,0.08)',
+          boxShadow: '0 8px 32px rgba(0,0,0,0.3)',
+          position: 'relative',
+        }}>
+          {/* Map label */}
+          <div style={{
+            position: 'absolute', top: 16, left: 16, zIndex: 10,
+            background: '#1a0f00',
+            border: '1px solid rgba(232,114,12,0.3)',
+            borderRadius: 10, padding: '8px 14px',
+            display: 'flex', alignItems: 'center', gap: 8,
+          }}>
+            <span style={{ fontSize: 14 }}>📍</span>
+            <span style={{ fontSize: 12, fontWeight: 600, color: '#f0a050' }}>
+              Saffron Public School, Faridabad
+            </span>
+          </div>
+
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3507.1327420727425!2d77.3106662761888!3d28.475548775750887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce714459d670d%3A0xd2005fd81352e7a2!2sSaffron%20Public%20School!5e0!3m2!1sen!2sin!4v1773927887595!5m2!1sen!2sin"
+            width="100%"
+            height="380"
+            style={{ border: 0, display: 'block', filter: 'invert(90%) hue-rotate(180deg)' }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            title="Saffron Public School Location"
+          />
+
+          {/* Open in Maps button */}
+          <a
+            href="https://maps.google.com/?q=Saffron+Public+School+Ashoka+Enclave+II+Sector+37+Faridabad"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              position: 'absolute', bottom: 16, right: 16, zIndex: 10,
+              display: 'inline-flex', alignItems: 'center', gap: 6,
+              background: '#E8720C', color: 'white',
+              padding: '8px 16px', borderRadius: 8,
+              fontSize: 12, fontWeight: 700, textDecoration: 'none',
+              boxShadow: '0 4px 14px rgba(232,114,12,0.4)',
+              transition: 'all 0.2s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = '#b85a08'; e.currentTarget.style.transform = 'translateY(-1px)' }}
+            onMouseLeave={e => { e.currentTarget.style.background = '#E8720C'; e.currentTarget.style.transform = 'translateY(0)' }}
+          >
+            Open in Maps
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
       <style>{`
         .contact-grid {
           display: grid;

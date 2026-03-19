@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const NAV_LINKS = [
   { label: 'Home', href: '#home' },
@@ -32,6 +33,7 @@ export default function Navbar() {
   const [mobileOpen,   setMobileOpen]   = useState(false)
   const [activeLink,   setActiveLink]   = useState('Home')
   const [openDropdown, setOpenDropdown] = useState(null)
+  const navigate = useNavigate()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50)
@@ -240,11 +242,10 @@ export default function Navbar() {
           {/* RIGHT SIDE */}
           <div className="flex items-center" style={{ gap: 10, flexShrink: 0 }}>
 
-            <a
-              href="#admission"
-              onClick={(e) => handleClick(e, '#admission', 'Admission')}
+            <button
+              onClick={() => navigate('/admission')}
               className="hidden lg:flex items-center transition-all duration-200"
-              style={{ gap: 7, padding: '10px 22px', borderRadius: 11, background: '#E8720C', color: 'white', fontSize: 13.5, fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 16px rgba(232,114,12,0.38)', letterSpacing: '0.01em' }}
+              style={{ gap: 7, padding: '10px 22px', borderRadius: 11, background: '#E8720C', color: 'white', fontSize: 13.5, fontWeight: 700, border: 'none', cursor: 'pointer', boxShadow: '0 4px 16px rgba(232,114,12,0.38)', letterSpacing: '0.01em' }}
               onMouseEnter={e => { e.currentTarget.style.background = '#b85a08'; e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 8px 28px rgba(232,114,12,0.50)' }}
               onMouseLeave={e => { e.currentTarget.style.background = '#E8720C'; e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 4px 16px rgba(232,114,12,0.38)' }}
             >
@@ -252,7 +253,7 @@ export default function Navbar() {
               <svg style={{ width: 13, height: 13 }} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
-            </a>
+            </button>
 
             {/* Hamburger */}
             <button
@@ -332,13 +333,12 @@ export default function Navbar() {
 
         {/* Footer */}
         <div style={{ padding: '16px', borderTop: '1px solid rgba(232,114,12,0.1)' }}>
-          <a
-            href="#admission"
-            onClick={(e) => handleClick(e, '#admission', 'Admission')}
-            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, width: '100%', padding: '13px', borderRadius: 12, background: '#E8720C', color: 'white', fontSize: 14, fontWeight: 700, textDecoration: 'none', boxShadow: '0 4px 16px rgba(232,114,12,0.35)' }}
+          <button
+            onClick={() => { setMobileOpen(false); navigate('/admission') }}
+            style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8, width: '100%', padding: '13px', borderRadius: 12, background: '#E8720C', color: 'white', fontSize: 14, fontWeight: 700, border: 'none', cursor: 'pointer', boxShadow: '0 4px 16px rgba(232,114,12,0.35)' }}
           >
             Apply Now 🎓
-          </a>
+          </button>
           <p style={{ textAlign: 'center', fontSize: 11, color: '#9ca3af', marginTop: 10 }}>📞 0129-4128196</p>
         </div>
       </div>

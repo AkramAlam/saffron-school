@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -7,8 +8,9 @@ import Gallery from './components/Gallery'
 import Activities from './components/Activities'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import AdmissionPage from './components/Admission'
 
-function App() {
+function HomePage() {
   return (
     <div>
       <Navbar />
@@ -21,6 +23,17 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <BrowserRouter basename="/saffron-school">
+      <Routes>
+        <Route path="/"          element={<HomePage />} />
+        <Route path="/admission" element={<AdmissionPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

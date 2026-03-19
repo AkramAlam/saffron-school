@@ -279,6 +279,44 @@ export default function Footer() {
           </button>
         </div>
 
+        {/* ── DESIGNED BY ── */}
+        <div style={{
+          textAlign: 'center',
+          padding: '14px 0',
+          borderTop: '1px solid rgba(255,255,255,0.04)',
+          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
+        }}>
+          <p style={{ fontSize: 12, color: 'rgba(255,255,255,0.25)' }}>
+            Design & Developed by{' '}
+            <a
+              href="mailto:akramalam7544@gmail.com"
+              style={{
+                color: '#E8720C', fontWeight: 600,
+                textDecoration: 'none', transition: 'color 0.2s',
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = '#f59340'}
+              onMouseLeave={e => e.currentTarget.style.color = '#E8720C'}
+            >
+              Akram Alam
+            </a>
+          </p>
+          {/* <a
+            href="mailto:akramalam7544@gmail.com"
+            style={{
+              display: 'inline-flex', alignItems: 'center', gap: 5,
+              fontSize: 11, color: 'rgba(255,255,255,0.35)',
+              background: 'rgba(232,114,12,0.08)',
+              border: '1px solid rgba(232,114,12,0.15)',
+              padding: '3px 10px', borderRadius: 100,
+              textDecoration: 'none', transition: 'all 0.2s',
+            }}
+            onMouseEnter={e => { e.currentTarget.style.background = 'rgba(232,114,12,0.15)'; e.currentTarget.style.color = '#f0a050' }}
+            onMouseLeave={e => { e.currentTarget.style.background = 'rgba(232,114,12,0.08)'; e.currentTarget.style.color = 'rgba(255,255,255,0.35)' }}
+          >
+            ✉ akramalam7544@gmail.com
+          </a> */}
+        </div>
+
       </div>
 
       <style>{`
