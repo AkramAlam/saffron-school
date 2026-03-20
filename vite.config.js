@@ -3,9 +3,6 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  plugins: [
-    react(),
-    tailwindcss(),
-  ],
-  base: '/saffron-school/',  // ← apna repo name
+  plugins: [react(), tailwindcss()],
+  base: '/saffron-school/',
 })

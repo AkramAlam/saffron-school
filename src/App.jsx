@@ -28,7 +28,7 @@ function HomePage() {
 
 function App() {
   return (
-    <BrowserRouter basename="/saffron-school">
+    <BrowserRouter>
       <Routes>
         <Route path="/"          element={<HomePage />} />
         <Route path="/admission" element={<AdmissionPage />} />
