@@ -101,7 +101,7 @@ export default function Footer() {
               Get latest news, circulars and updates from Saffron Public School
             </p>
           </div>
-          <div style={{ display: 'flex', gap: 10, flex: 1, maxWidth: 400 }}>
+          <div style={{ display: 'flex', gap: 10, flex: 1, maxWidth: 400,flexWrap:'wrap' }}>
             {subscribed ? (
               <div style={{ flex: 1, padding: '11px 16px', background: 'rgba(80,200,120,0.1)', border: '1px solid rgba(80,200,120,0.3)', borderRadius: 10, fontSize: 13.5, color: '#50c878', fontWeight: 500 }}>
                 ✅ Subscribed successfully!
@@ -114,11 +114,14 @@ export default function Footer() {
                   onKeyDown={e => e.key === 'Enter' && handleSubscribe()}
                   placeholder="Enter your email address"
                   style={{
-                    flex: 1, padding: '11px 16px',
+                    flex: 1, 
+                    padding: '11px 16px',
                     background: 'rgba(255,255,255,0.06)',
                     border: '1px solid rgba(255,255,255,0.1)',
-                    borderRadius: 10, fontSize: 13.5,
-                    color: 'white', outline: 'none',
+                    borderRadius: 10, 
+                    fontSize: 13.5,
+                    color: 'white', 
+                    outline: 'none',
                     fontFamily: 'inherit',
                   }}
                   onFocus={e => e.target.style.borderColor = 'rgba(232,114,12,0.4)'}
@@ -128,6 +131,7 @@ export default function Footer() {
                   onClick={handleSubscribe}
                   style={{
                     padding: '11px 22px', background: '#E8720C',
+                    width: '100%',
                     color: 'white', border: 'none', borderRadius: 10,
                     fontSize: 13.5, fontWeight: 700, cursor: 'pointer',
                     whiteSpace: 'nowrap', transition: 'background 0.2s',
