@@ -173,7 +173,7 @@ export default function Students() {
                 <p style={{ fontSize: 14, color: '#7a5c48', lineHeight: 1.7, marginBottom: 28 }}>
                   Search and download your Transfer Certificate by entering your student name or admission number below.
                 </p>
-                <div style={{ display: 'flex', gap: 10, marginBottom: 16 }}>
+                <div style={{ display: 'flex', gap: 10, marginBottom: 16, flexWrap: 'wrap' }}>
                   <input
                     value={tcQuery}
                     onChange={e => setTcQuery(e.target.value)}
@@ -182,7 +182,7 @@ export default function Students() {
                     onFocus={e => e.target.style.borderColor = '#E8720C'}
                     onBlur={e => e.target.style.borderColor = 'rgba(232,114,12,0.2)'}
                   />
-                  <button style={{ padding: '12px 24px', background: '#E8720C', color: 'white', border: 'none', borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap' }}>
+                  <button style={{ padding: '12px 24px', background: '#E8720C', color: 'white', border: 'none', borderRadius: 10, fontSize: 14, fontWeight: 700, cursor: 'pointer', whiteSpace: 'nowrap', width: '100%' }}>
                     Search
                   </button>
                 </div>
